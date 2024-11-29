@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // 変更前
+        // return view('home');
+
+        // 変更後
+        // ログイン成功後にtodoのトップページへリダイレクトする
+        return redirect()->route('todo.index');
     }
 }
